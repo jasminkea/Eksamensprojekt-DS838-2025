@@ -1,0 +1,189 @@
+/********************************************/
+/* 1. CSS Variables        */
+/********************************************/
+:root {
+  --sage-green: #B2AC88;
+  --dusty-purple: #7C82A5;
+  --light-neutral: #F8F8F2;
+  --off-white: #E2E0D3;
+  --brownish-gray: #A39E8C;
+  --dark-neutral: #575448;
+  --accent-border: orange;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-neutral);
+  color: var(--dark-neutral);
+  line-height: 1.5;
+  padding: 20px;
+  font-family: 'Winky Sans', sans-serif;
+}
+
+/********************************************/
+/* 2. Top Bar                  */
+/********************************************/
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--off-white);
+  padding: 10px 20px;
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.nav-left p,
+.nav-right p {
+  margin: 0;
+}
+
+/********************************************/
+/* 3. Banner                 */
+/********************************************/
+.banner {
+  position: relative;
+  min-height: 300px;
+  background-color: var(--brownish-gray);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner h1 {
+  font-size: 4rem;
+  z-index: 1;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+.banner .tagline {
+  font-size: 2rem;
+  z-index: 1;
+  padding-left: 150px;
+  font-family: 'Rochester', sans-serif;
+  margin-top: 0;
+}
+
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.banner video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+} 
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1;
+}
+/********************************************/
+/* 4. Gen. sect. styling               */
+/********************************************/
+section {
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  background-color: var(--off-white);
+  margin-bottom: 20px;
+}
+
+/********************************************/
+/* 5. Row Layout       */
+/********************************************/
+.row {
+  display: flex;
+  padding: 1;
+}
+
+.landing-box,
+.pic-box {
+  flex: 1;
+  max-width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+/* For images in the pic-box */
+.pic-box img.responsive-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  filter: brightness(0.5);
+}
+
+/********************************************/
+/* 6. Divider Styling        */
+/********************************************/
+.divider {
+  background-color: #2c2c2c;  
+  color: var(--light-neutral);
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/********************************************/
+/* 7. Footer Styling          */
+/********************************************/
+.section15 {
+  background-color: #1a1a1a;  
+  color: var(--light-neutral);
+  text-align: center;
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/********************************************/
+/* 8. Responsive                     */
+/********************************************/
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
