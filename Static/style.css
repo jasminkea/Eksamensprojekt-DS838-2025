@@ -108,8 +108,10 @@ body {
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 2rem;
+  font-weight: 500;
   text-align: center;
   z-index: 1;
+  font-family: 'Lora', sans-serif;
 }
 /********************************************/
 /* 4. Gen. sect. styling               */
@@ -137,6 +139,8 @@ section {
   overflow: hidden;
 }
 
+
+
 /* For images in the pic-box */
 .pic-box img.responsive-img {
   width: 100%;
@@ -146,6 +150,11 @@ section {
   border-radius: 5px;
   display: block;
   filter: brightness(0.5);
+}
+
+.spotlight-prod {
+  width: 300px;
+  height: auto; 
 }
 
 /********************************************/
@@ -160,8 +169,15 @@ section {
 }
 
 /********************************************/
-/* 7. Footer Styling          */
+/* 7. Section Styling          */
 /********************************************/
+
+.section10 {
+  background-color: var(--sage-green);
+  padding: 20px;
+  border-radius: 5px;
+}
+
 .section15 {
   background-color: #1a1a1a;  
   color: var(--light-neutral);
