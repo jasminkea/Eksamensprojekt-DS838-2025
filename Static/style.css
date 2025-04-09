@@ -137,8 +137,9 @@ section {
   max-width: 100%;
   height: 700px;
   overflow: hidden;
+  text-align: center;
+  padding: 15px;
 }
-
 
 
 /* For images in the pic-box */
@@ -172,11 +173,27 @@ section {
 /* 7. Section Styling          */
 /********************************************/
 
+.section6 .pic-box {
+
+  filter: brightness(0.5);
+}
 .section10 {
   background-color: var(--sage-green);
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
+  font-size: 2.0rem;   
+  text-align: center;
+  font-family: 'Rochester', sans-serif;
 }
+
+.section10 .tagline {
+  padding: 5px;
+  font-size: 2.0rem; 
+  max-width: 100%;       
+  line-height: 1.0;  
+  font-family: 'Lora', sans-serif;    
+}
+
 
 .section15 {
   background-color: #1a1a1a;  
