@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Mousse med Chocolate Fudge Arla",
+    "price": 14.95,
+    "description": "Arla® Protein mousse med smag af chokolade fudge er en lækker og luftig mousse, der har et højt proteinindhold. Den indeholder 20g protein per bæger, har et lavt fedtindhold, er ikke tilsat sukker og er laktosefri. Den er ideel til at slukke den lille sult eller som en snack når du har lyst til en lille forkælelse. Produktet skal opbevares på køl og nydes afkølet.",
+    "category": "dessert",
+    "image": "../Static/Images/product-arla-chocolatefudge.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Creme fraiche 18% Thise",
+    "price": 21.00,
+    "description": "Thises laktosefri creme fraiche har en unik mild og flødeagtig smag samt en cremet konsistens.",
+    "category": "main course",
+    "image": "../Static/Images/product-thise-cremefraiche.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Skyr med Mango/Passion Staystrong",
+    "price": 24.95,
+    "description": "Stay Strong er en serie proteinrige mejeriprodukter til dig der træner, og ikke vil gå på kompromis med smagen. Fundamentet for bevægelse – fra ekstremsport til havearbejde – er stærke muskler og knogler. Protein bidrager til muskelopbygning og vedligeholdelse af knoglerne.",
+    "category": "breakfast",
+    "image": "../Static/Images/product-staystrong-skyr.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Drikkeskyr Arla",
+    "price": 17.00,
+    "description": "Arla® Protein mælkedrik med en lækker smag af jordbær og hindbær. Produktet er med 40% mindre sukker end andre smagstilsatte mælkedrikke, og der er ingen sødestoffer tilsat. Dertil indeholder den 25g protein pr. portion, som bidrager til at vedligeholde og øge muskelmasse, som en del af en sund, varieret kost og aktiv livsstil. Derudover er den laktosefri.",
+    "category": "snack",
+    "image": "../Static/product-arla-drikkeskyr.jpg"
+  }
+]
