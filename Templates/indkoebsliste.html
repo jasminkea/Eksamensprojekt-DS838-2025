@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indkøbsliste</title>
+
+  <link rel="stylesheet" href="../Static/style.css" />
+</head>
+<body>
+  <!-- Fixed Navbar -->
+  <header class="top-bar main-header">
+    <div class="nav-left">
+      <img src="logo.png" alt="LOGO" class="logo" />
+    </div>
+    <nav class="nav-center">
+      <ul>
+        <li><a href="./lak_prod.html">Laktosefri produkter</a></li>
+        <li><a href="./laktose_info.html">Hvad er laktose?</a></li>
+        <li><a href="./recipe.html">Opskrifter</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="./soeg.html">Søg</a>
+      <a href="#">Login</a>
+    </div>
+  </header>
+
+  <!-- Shopping Cart Section -->
+  <section class="cart-container">
+    <h2>🛒 Din Indkøbsliste</h2>
+    <div id="cart-items"></div>
+
+    <!-- Controls: will be hidden when the cart is empty -->
+    <div class="cart-controls" id="cart-controls">
+      <button id="clear-cart">Tøm listen</button>
+      <a href="./index.html"><button>Tilbage til forsiden</button></a>
+    </div>
+  </section>
+
+  <!-- External JavaScript for the shopping cart  -->
+  <script src="../Data/indkoebsliste.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produkter</title>
+ 
+  <link rel="stylesheet" href="../Static/lak_prod.css" />
+
+  <!-- Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rochester&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Additional inline styling for the search section */
+    .search-section {
+      text-align: center;
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+  <!-- Updated NAV-BAR -->
+  <header class="top-bar main-header">
+    <div class="nav-left">
+      <img src="logo.png" alt="LOGO" class="logo" />
+    </div>
+  
+    <nav class="nav-center">
+      <ul>
+        <li><a href="./lak_prod.html">Laktosefri produkter</a></li>
+        <li><a href="./laktose_info.html">Hvad er laktose?</a></li>
+      </ul>
+    </nav>
+  
+    <div class="nav-right">
+      <a href="./recipe.html">Opskrifter</a> | 
+      <a href="./indkobsliste.html">Indkøbsliste</a> | 
+      <a href="#">Login</a>
+    </div>
+  </header>
+  
+  <!-- Sticky Sections for Intro -->
+  <section class="sticky-section">
+    <h2 class="sticky-title">Section 3</h2>
+    <p>Intro or tagline</p>
+  </section>
+
+  <section class="sticky-section">
+    <h2 class="sticky-title">Section 4</h2>
+    <p>Additional info</p>
+  </section>
+
+
+  <!-- Row structure -->
+  <div class="row sticky-section">
+    <h2 class="sticky-title">Section 5 & 6</h2>
+    <section class="section5 landing-box">
+      <p>Landing page content</p>
+    </section>
+    <section class="section6 pic-box">
+      <img src="your-image.jpg" alt="Example" class="responsive-img" />
+    </section>
+  </div>
+ 
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <h1>Vores Produkter</h1>
+    <p class="hero-subtitle">Laktosefri og fulde af smag</p>
+  </section>
+ 
+  <!-- IMAGE + TEXT ABOUT PRODUCTS -->
+  <section class="image-text-section">
+    <div class="image-text-wrapper">
+      <div class="image-block">
+        <img src="produkt-intro.jpg" alt="Billede" />
+      </div>
+      <div class="text-block">
+        <h2>Tekst omkring produkterne</h2>
+        <p>
+          Her kan du skrive en introduktion til dine produkter. 
+          Beskriv hvad der gør dem unikke, og hvorfor de er laktosefri. 
+          Giv dine kunder et indblik i kvaliteten, smagen eller historien bag.
+        </p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SEARCH / FILTER SECTION (centered) -->
+  <section class="search-section">
+    <h2>Søgefunktion</h2>
+    <div class="search-filter">
+      <div class="filter-block">
+        <label for="filter">Filter:</label>
+        <select id="filter">
+          <option value="all">Alle</option>
+          <option value="mejeri">Mejeri</option>
+          <option value="drikke">Drikke</option>
+          <option value="dessert">Dessert</option>
+        </select>
+      </div>
+      <div class="search-block">
+        <label for="search">Søg:</label>
+        <input type="text" id="search" placeholder="Søg efter produkt..." />
+      </div>
+
+    <!-- New: Checkbox block -->
+    <div class="checkboxes-block">
+      <p>Tilvalg:</p>
+      <label>
+        <input type="checkbox" class="search-checkbox" value="okologisk" />
+        Økologisk
+      </label>
+      <label>
+        <input type="checkbox" class="search-checkbox" value="glutenfri" />
+        Glutenfri
+      </label>
+      <label>
+        <input type="checkbox" class="search-checkbox" value="lavkalorie" />
+        Lavkalorie
+      </label>
+
+      <!-- search button  -->
+      <button type="button">Søg</button>
+    </div>
+  </section>
+
+  <section class="product-carousel">
+    <h2>Produktfremvisning</h2>
+    <div class="carousel-container">
+      <!-- Left Arrow -->
+      <button class="carousel-prev">&#10094;</button>
+      
+      <!-- The grid carousel: uses CSS Grid for layout -->
+      <div class="grid-carousel">
+        <!-- Product Item 1 -->
+        <div class="product-item" data-category="mejeri">
+          <img src="product1.jpg" alt="Produkt 1" />
+          <h3>Produktnavn 1</h3>
+          <p>Beskrivelse af produkt 1</p>
+        </div>
+        <!-- Product Item 2 -->
+        <div class="product-item" data-category="drikke">
+          <img src="product2.jpg" alt="Produkt 2" />
+          <h3>Produktnavn 2</h3>
+          <p>Beskrivelse af produkt 2</p>
+        </div>
+        <!-- Product Item 3 -->
+        <div class="product-item" data-category="dessert">
+          <img src="product3.jpg" alt="Produkt 3" />
+          <h3>Produktnavn 3</h3>
+          <p>Beskrivelse af produkt 3</p>
+        </div>
+        <!-- Product Item 4 -->
+        <div class="product-item" data-category="mejeri">
+          <img src="product4.jpg" alt="Produkt 4" />
+          <h3>Produktnavn 4</h3>
+          <p>Beskrivelse af produkt 4</p>
+        </div>
+        <!-- Product Item 5 -->
+        <div class="product-item" data-category="drikke">
+          <img src="product5.jpg" alt="Produkt 5" />
+          <h3>Produktnavn 5</h3>
+          <p>Beskrivelse af produkt 5</p>
+        </div>
+        <!-- Product Item 6 -->
+        <div class="product-item" data-category="dessert">
+          <img src="product6.jpg" alt="Produkt 6" />
+          <h3>Produktnavn 6</h3>
+          <p>Beskrivelse af produkt 6</p>
+        </div>
+      </div>
+      
+      <!-- Right Arrow -->
+      <button class="carousel-next">&#10095;</button>
+    </div>
+    
+    <!-- Dots (optional) -->
+    <div class="carousel-dots"></div>
+  </section>
+  
+ 
+  <!-- PRODUCT GRID with more products -->
+  <section class="product-grid">
+    <h2>Produktfremvisning</h2>
+    <div class="grid-container">
+      <!-- Product Items (added extra examples) -->
+      <div class="product-item" data-category="mejeri">
+        <img src="product1.jpg" alt="produkt" />
+        <h3>Produktnavn 1</h3>
+        <p>Beskrivelse af produktet.</p>
+      </div>
+ 
+      <div class="product-item" data-category="drikke">
+        <img src="product2.jpg" alt="produkt" />
+        <h3>Produktnavn 2</h3>
+        <p>Beskrivelse af produktet.</p>
+      </div>
+ 
+      <div class="product-item" data-category="dessert">
+        <img src="product3.jpg" alt="produkt" />
+        <h3>Produktnavn 3</h3>
+        <p>Beskrivelse af produktet.</p>
+      </div>
+ 
+      <div class="product-item" data-category="mejeri">
+        <img src="product4.jpg" alt="produkt" />
+        <h3>Produktnavn 4</h3>
+        <p>Beskrivelse af produktet.</p>
+      </div>
+      
+      <!-- Additional product items -->
+      <div class="product-item" data-category="drikke">
+        <img src="product5.jpg" alt="produkt" />
+        <h3>Produktnavn 5</h3>
+        <p>Beskrivelse af produktet.</p>
+      </div>
+      
+      <div class="product-item" data-category="dessert">
+        <img src="product6.jpg" alt="produkt" />
+        <h3>Produktnavn 6</h3>
+        <p>Beskrivelse af produktet.</p>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- Quiz Modal (pop-up form) -->
+<div id="quizModal" class="modal">
+  <div class="modal-content">
+    <!-- Close Button -->
+    <span id="closeQuizForm" class="modal-close">&times;</span>
+
+    <h2>Educational Quiz</h2>
+
+    <form id="quizForm">
+      <!-- Example fields -->
+      <label for="userName">Name:</label>
+      <input type="text" id="userName" placeholder="Type your name" required />
+
+      <label for="questionOne">Which of the following is typically lactose-free?</label>
+      <select id="questionOne" required>
+        <option value="">--Vælg--</option>
+        <option value="a">Skummetmælk</option>
+        <option value="b">Havremælk</option>
+        <option value="c">Fløde</option>
+      </select>
+
+      <label for="questionTwo">Another question (example)?</label>
+      <input type="text" id="questionTwo" placeholder="Type answer..." required />
+
+      <div class="modal-btns">
+        <button type="button" id="quizSubmitBtn">Submit</button>
+      </div>
+    </form>
+
+    <!-- A placeholder to display quiz results -->
+    <div id="quizResult" class="quiz-result"></div>
+  </div>
+</div>
+
+
+
+<section class="trustpilot-carousel">
+  <h2>Hvad siger brugerne?</h2>
+
+  <!-- One encompassing box that holds both the summary and the carousel -->
+  <div class="trustpilot-box">
+
+    <!-- Trustpilot-Style Summary (star rating, total reviews, etc.) -->
+    <div class="trustpilot-summary">
+      <div class="tp-summary-left">
+        <span class="star-label">Excellent</span>
+        <div class="star-rating">
+          <!-- Example star icons -->
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9734;</span> <!-- 4 full stars + 1 empty star -->
+        </div>
+        <span class="trustscore">4.9 out of 5</span>
+      </div>
+      <div class="tp-summary-right">
+        <p class="review-count">
+          20,921 reviews on <span class="tp-logo">Trustpilot</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- The same container now also includes the carousel -->
+    <div class="carousel-container trust-container">
+      <!-- Left Arrow -->
+      <button class="carousel-prev trust-prev">&#10094;</button>
+
+      <!-- Inner wrapper that slides horizontally through reviews -->
+      <div class="carousel-inner trust-inner">
+        <div class="carousel-item trust-review" data-review-id="1">
+          <p class="review-text">"Fantastisk opskrift! Det var så nemt at følge og resultatet var imponerende." – Emil</p>
+        </div>
+        <div class="carousel-item trust-review" data-review-id="2">
+          <p class="review-text">"Jeg elsker denne opskrift. Den har virkelig ændret min måde at lave mad uden laktose på." – Anna</p>
+        </div>
+        <div class="carousel-item trust-review" data-review-id="3">
+          <p class="review-text">"Smagen var fantastisk, og jeg fik mange komplimenter fra gæsterne. Kan varmt anbefales!" – Ole</p>
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button class="carousel-next trust-next">&#10095;</button>
+    </div>
+
+    <!-- Carousel Dots  -->
+    <div class="carousel-dots trust-dots"></div>
+  </div>
+</section>
+
+<!-- Educational Quiz Modal -->
+<div id="quizModal" class="modal">
+  <div class="modal-content">
+    <span id="closeQuiz" class="modal-close">&times;</span>
+    <h2>Educational Quiz</h2>
+    <form id="quizForm">
+      <label for="userName">Name:</label>
+      <input type="text" id="userName" placeholder="Your name" required />
+
+      <label for="questionOne">
+        Which of the following is typically lactose‑free?
+      </label>
+      <select id="questionOne" required>
+        <option value="">--Select--</option>
+        <option value="a">Skummetmælk</option>
+        <option value="b">Havremælk</option>
+        <option value="c">Fløde</option>
+      </select>
+
+      <label for="questionTwo">
+        What is the alternative for milk? (Type "milk" if correct)
+      </label>
+      <input type="text" id="questionTwo" placeholder="Type your answer" required />
+
+      <div class="modal-btns">
+        <button type="button" id="quizSubmitBtn">Submit</button>
+      </div>
+    </form>
+    <div id="quizResult" class="quiz-result"></div>
+  </div>
+</div>
+
+  
+  <!-- SECTION 15: Footer -->
+  <footer class="section15">
+    <!-- Top row with columns -->
+    <div class="footer-top">
+      <!-- kontaktinfo -->
+      <div class="footer-col">
+        <h3>kontaktinfo</h3>
+        <p>Adresse</p>
+        <p>Email</p>
+        <p>Telefon</p>
+      </div>
+      <!-- Følg os -->
+      <div class="footer-col">
+        <h3>Følg os</h3>
+        <p>Facebook</p>
+        <p>Instagram</p>
+        <p>LinkedIn</p>
+      </div>
+      <!-- email sign up -->
+      <div class="footer-col">
+        <h3>email sign up</h3>
+        <p>Nyhedsbrev</p>
+        <p>Kontaktformular</p>
+      </div>
+      <!-- Logo area -->
+      <div class="footer-col footer-logo">
+        <p>LOGO</p>
+      </div>
+    </div>
+    <!-- Bottom row with links -->
+    <div class="footer-bottom">
+      <ul>
+        <li><a href="#">sitemap</a></li>
+        <li><a href="#">cookie policy</a></li>
+        <li><a href="#">håndtering af personlige oplysninger</a></li>
+        <li><a href="#">betingelser for brug</a></li>
+      </ul>
+    </div>
+  </footer>
+   
+  <script src="../Data/lak_prod.js" defer></script>
+</body>

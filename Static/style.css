@@ -39,9 +39,16 @@ body {
   margin-bottom: 20px;
 }
 
-.nav-left p,
-.nav-right p {
+.nav-left,
+.nav-right {
   margin: 0;
+  display: flex;
+}
+
+.links {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--dark-neutral)
 }
 
 /********************************************/
@@ -94,11 +101,42 @@ body {
   filter: brightness(0.5);
 } 
 
+/********************************************/
+/* 4. Images and videos                 */
+/********************************************/
+
 .image-container {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container video {
+  object-fit: cover;
+  object-position: center bottom;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.35);
+}
+
+.video-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* or something readable */
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1;
+  font-family: 'Lora', sans-serif;
+  font-size: 3.5rem
 }
 
 .image-text {
@@ -113,11 +151,54 @@ body {
   z-index: 1;
   font-family: 'Lora', sans-serif;
 }
+
+/********************************************/
+/* 4. Gen. sect. styling               */
+/********************************************/
+
+.section3 {
+  background-color: rgba(255, 255, 255, 0.4); /* light translucent white */
+  padding: 2rem 0;
+  border-radius: 10px; /* optional: smooth corners */
+}
+.section3 .quote-box {
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  
+}
+
+.section3 .quote-box h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--dark-neutral);
+  margin-bottom: 0.5rem;
+  font-family: "Rochester", sans-serif;
+  font-size: 4rem;
+}
+
+.section3 .quote-box p {
+  font-size: 2rem;
+  color: var(--dark-neutral);
+}
+
+.section5 {
+font-family: 'Lora', sans-serif;
+align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+
+}
+
+
 /********************************************/
 /* 4. Gen. sect. styling               */
 /********************************************/
 section {
-  border: 1px solid var(--accent-border);
+  border: none;
   border-radius: 5px;
   background-color: var(--off-white);
   margin-bottom: 20px;
@@ -130,6 +211,7 @@ section {
   display: flex;
   padding: 1;
 }
+
 
 .landing-box,
 .pic-box {
@@ -173,10 +255,8 @@ section {
 /* 7. Section Styling          */
 /********************************************/
 
-.section6 .pic-box {
 
-  filter: brightness(0.5);
-}
+
 .section10 {
   background-color: var(--sage-green);
   padding: 10px;

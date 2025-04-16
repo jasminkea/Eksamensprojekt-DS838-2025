@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>mælkevejen..</title>
-  <link rel="stylesheet" href="../Static/style.css"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rochester&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -16,18 +16,29 @@
   <!-- SECTION 1: Top Bar -->
   <section class="section1 top-bar">
     <div class="nav-left">
-      <p>Info | Produkter | Opskrifter </p>
-      
-      <!-- Logo or site name  -->
+      <a href="./info.html" class="links"><p>Info</p></a>
+      <a href="./index.html" class="links"><p>Produkter</p></a>
+      <a href="./index.html" class="links"><p>Opskrifter</p></a>
     </div>
+  
     <div class="nav-right">
-      <p>Indkøbsliste | Søg | Login</p>
+      <a href="#" class="links"><p>Søg</p></a>
+  
+      {% if session.get('user') %}
+        <a href="{{ url_for('indkoebsliste') }}" class="links"><p>Favoritter</p></a>
+        <a href="{{ url_for('logout') }}" class="links"><p>Log ud</p></a>
+      {% else %}
+        <a href="{{ url_for('login') }}" class="links"><p>Login</p></a>
+      {% endif %}
     </div>
   </section>
+  
+      
 
   <!-- SECTION 2: Banner (background video) -->
   <section class="section2 banner">
-    <video src="../Static/Videos/field_running.mp4" autoplay muted loop></video>
+    <video src="{{ url_for('static', filename='Videos/field_running.mp4') }}" autoplay muted loop></video>
+
 
     <div class="banner-text">
         <h1>Mælkevejen..</h1>
@@ -37,33 +48,30 @@
 
   <!-- SECTION 3 -->
   <section class="section3">
-    <h2>Section 3</h2>
-    <p>Intro or tagline</p>
+    <div class="quote-box">
+    <h2>"Livet er bedre uden ondt i maven."</h2>
+    <p>Hos os handler det ikke bare om laktosefri produkter - men om friheden til at nyde livet, uden kompromis </p>
+    </div>
   </section>
 
-  <!-- SECTION 4 -->
-  <section class="section4">
-    <h2>Section 4</h2>
-    <p>Additional info</p>
-  </section>
 
   <!-- SECTIONS 5 & 6  -->
-  <div class="row">
+  <div class="row" >
     <section class="section6 pic-box">
-      <h2>Hvad er Laktose?</h2>
-      <video src="../Static/Videos/field_cows.mp4" autoplay muted loop></video>
+      <div class = "video-container">
+      <h2 class="video-heading">Hvad er Laktose?</h2>
+      <video src="{{ url_for('static', filename='Videos/field_cows.mp4') }}" autoplay muted loop></video>
+    </div>
     </section>
+
     <section class="section5 landing-box">
-      <p>Laktose er en naturlig sukkerart, der findes i mælk og mejeriprodukter. </p>
-      <p>For de fleste passer den fint ind i kosten – men for mange kan laktose skabe ubehag som oppustethed, mavekneb eller træthed.</p>
-        <p>Læs videre for at dykke ned i, hvad laktose egentlig er, hvorfor nogle ikke tåler det, og hvordan du nemt kan tilpasse din kost uden at gå på kompromis med smag eller næring.</p>
+      <h1>Laktose er en naturlig sukkerart, der findes i mælk og mejeriprodukter. </h1>
+      <h3>For de fleste passer den fint ind i kosten - men for mange kan laktose skabe ubehag som oppustethed, mavekneb eller træthed.</h3>
+      <br>
+      <h3>Læs videre for at dykke ned i, hvad laktose egentlig er, hvorfor nogle ikke tåler det, og hvordan du nemt kan tilpasse din kost uden at gå på kompromis med smag eller næring.</h3>
     </section>
   </div>
 
-  <!-- SECTION 7: Divider  -->
-  <section class="section7 divider">
-    <p>Section 7 - Divider</p>
-  </section>
 
   <!-- SECTION 8: Landing (Left) + Pic (Right) -->
   <section class="section8">
@@ -75,16 +83,12 @@
       <div class="pic-box">
         <div class="image-container">
           <h1 class="image-text">Se udvalget af laktosefri produkter her!</h1>
-          <img src="../Static/Images/products-cow.jpg" alt="Example" class="responsive-img" />
+          <img src="{{ url_for('static', filename='Images/products-cow.jpg') }}" alt="Example" class="responsive-img" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 9: Divider  -->
-  <section class="section9 divider">
-    <p>Section 9 - Divider</p>
-  </section>
 
   <!-- SECTION 10:  (Landing + Color Background) -->
   <section class="section10">
@@ -94,11 +98,9 @@
         <p class="tagline">Her finder du et lækkert bud på, hvordan en laktosefri hverdag kan se ud. </p>
           <p class="tagline">Morgen, middag, aften - og en lille snack til. </p>
         </p>
-      <section class="section10 pic-box">
-        <div class="image-container">
-            <img src="../Static/Images/chocolate-fudge.jpg" alt="product-grid" class="responsive-img" />
-        </div>
-    </section>
+      <section class="product-grid">
+        <script src="../Data/script.js"></script>
+      </section>
 
     </div>
   </section>
@@ -114,7 +116,8 @@
       <div class="image-container">
         <h1 class="image-text">Laktosefri opskrifter</h1>
         <a href="./recipe.html">
-          <img src="../Static/Images/recipe-pic.jpg" alt="Example" class="responsive-img" />  
+          <img src="{{ url_for('static', filename='Images/recipe-pic.jpg') }}" alt="Example" class="responsive-img" />
+
         </a>
       </div>
 

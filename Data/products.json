@@ -3,11 +3,7 @@
     "id": 1,
     "title": "Mousse med Chocolate Fudge Arla",
     "price": 14.95,
-    "description": "Arla® Protein mousse med smag af chokolade fudge er en lækker og luftig mousse, der har et højt proteinindhold. Den indeholder 20g protein per bæger, har et lavt fedtindhold, er ikke tilsat sukker og er laktosefri. Den er ideel til at slukke den lille sult eller som en snack når du har lyst til en lille forkælelse. Produktet skal opbevares på køl og nydes afkølet.
-- Protein mousse med smag af chokolade fudge
-- Højt proteinindhold
-- Ikke tilsat sukker, lavt fedtindhold og laktosefri
-- Ideel som mellemmåltid og/eller snack enten hjemme eller on the go",
+    "description": "Arla® Protein mousse med smag af chokolade fudge er en lækker og luftig mousse, der har et højt proteinindhold. Den indeholder 20g protein per bæger, har et lavt fedtindhold, er ikke tilsat sukker og er laktosefri. Den er ideel til at slukke den lille sult eller som en snack når du har lyst til en lille forkælelse. Produktet skal opbevares på køl og nydes afkølet.",
     "category": "dessert",
     "image": "../Static/Images/product-arla-chocolatefudge.jpg"
   },
@@ -31,11 +27,8 @@
     "id": 4,
     "title": "Drikkeskyr Arla",
     "price": 17.00,
-    "description": "Arla® Protein mælkedrik med en lækker smag af jordbær og hindbær. Produktet er med 40% mindre sukker end andre smagstilsatte mælkedrikke, og der er ingen sødestoffer tilsat. Dertil indeholder den 25g protein pr. portion, som bidrager til at vedligeholde og øge muskelmasse, som en del af en sund, varieret kost og aktiv livsstil. Derudover er den laktosefri.
-- Højt proteinindhold
-- Nemt og lækkert mellemmåltid
-- Ideel på farten
-- Laktosefri",
+    "description": "Arla® Protein mælkedrik med en lækker smag af jordbær og hindbær. Produktet er med 40% mindre sukker end andre smagstilsatte mælkedrikke, og der er ingen sødestoffer tilsat. Dertil indeholder den 25g protein pr. portion, som bidrager til at vedligeholde og øge muskelmasse, som en del af en sund, varieret kost og aktiv livsstil. Derudover er den laktosefri.",
     "category": "snack",
     "image": "../Static/product-arla-drikkeskyr.jpg"
-  },
+  }
+]

@@ -1,0 +1,28 @@
+[{
+    "name": "Jasmin",
+    "email": "test@test.dk",
+    "password": "123456",
+    "Street": "Vesterbro 5C",
+    "pcode": "5000",
+    "city": "Odense",
+    "birthdate": "19.08.1998"
+},
+{
+    "name": "Sara Maria Olsen",
+    "email": "Sara@test.dk",
+    "password": "123456",
+    "Street": "Campusvej 55",
+    "pcode": "5230",
+    "city": "Odense",
+    "birthdate": "28.10.1967"
+},
+{
+    "name": "Tariq Yousef",
+    "email": "yousef@sdu.dk",
+    "password": "123456",
+    "Street": "test",
+    "pcode": "test",
+    "city": "test",
+    "birthdate": "1987-08-01"
+}
+]
