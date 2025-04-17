@@ -89,21 +89,27 @@
     </div>
   </section>
 
+<!-- SECTION 10:  (Landing + Color Background) -->
+<section class="section10">
+  <div class="section10">
+    <h1>Mælk uden Mælk - hele dagen</h1>
+    <p class="tagline">Det er nemt at spise laktosefrit - endnu nemmere end du tror. </p>
+    <p class="tagline">Her finder du et lækkert bud på, hvordan en laktosefri hverdag kan se ud. </p>
+    <p class="tagline">Morgen, middag, aften - og en lille snack til. </p>
 
-  <!-- SECTION 10:  (Landing + Color Background) -->
-  <section class="section10">
-    <div class="section10">
-        <h1>Mælk uden Mælk - hele dagen</h1>
-        <p class="tagline">Det er nemt at spise laktosefrit - endnu nemmere end du tror. </p>
-        <p class="tagline">Her finder du et lækkert bud på, hvordan en laktosefri hverdag kan se ud. </p>
-          <p class="tagline">Morgen, middag, aften - og en lille snack til. </p>
-        </p>
-      <section class="product-grid">
-        <script src="../Data/script.js"></script>
-      </section>
+    <section class="product-grid">
+      {% for product in products %}
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='Images/' ~ product.image) }}" alt="{{ product.day }}">
+          <h3>{{ product.title }}</h3>
+          <p><strong>{{ product.price }} kr</strong></p>
+          <p>{{ product.description }}</p>
+        </div>
+      {% endfor %}
+    </section>
+  </div>
+</section>
 
-    </div>
-  </section>
 
   <!-- SECTIONS 11 & 12: (Landing + Picture) -->
   <div class="row">
