@@ -56,5 +56,10 @@ def indkoebsliste():
         return redirect(url_for('login'))
     return render_template("indkoebsliste.html")
 
+@app.route('/info')
+def info():
+    return render_template("info.html")
+
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
