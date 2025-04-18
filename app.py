@@ -8,7 +8,9 @@ app.secret_key = 'your_secret_key'
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    with open('Data/products.json', 'r', encoding='utf-8') as f:
+        products = json.load(f)
+    return render_template("index.html", products=products)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -41,7 +43,6 @@ def forgot_password():
         message = "Emailadressen blev ikke fundet."
         return render_template("forgot_password.html", message=message, redirect_back=False)
 
-
     return render_template("forgot_password.html")
 
 @app.route('/logout')
@@ -54,6 +55,11 @@ def indkoebsliste():
     if 'user' not in session:
         return redirect(url_for('login'))
     return render_template("indkoebsliste.html")
+
+@app.route('/info')
+def info():
+    return render_template("info.html")
+
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)

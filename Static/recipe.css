@@ -1,6 +1,419 @@
-.square {
-    background-color: pink;
+/********************************************
+ * 1. CSS Variables
+ ********************************************/
+ :root {
+  --sage-green: #B2AC88;
+  --dusty-purple: #7C82A5;
+  --light-neutral: #F8F8F2;
+  --off-white: #E2E0D3;
+  --brownish-gray: #A39E8C;
+  --dark-neutral: #575448;
+  --accent-border: orange;
 }
-.circle {
-    background-color: pink;
+
+/********************************************
+ * 2. Reset & Base Styling
+ ********************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-neutral);
+  color: var(--dark-neutral);
+  line-height: 1.5;
+  padding: 20px;
+  font-family: 'Winky Sans', sans-serif;
+}
+
+/********************************************
+ * 3. Header & Navigation
+ ********************************************/
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--off-white);
+  padding: 10px 20px;
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.nav-center ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-center li a {
+  text-decoration: none;
+  color: var(--dark-neutral);
+  font-weight: 500;
+}
+
+/********************************************
+ * 4. Featured Recipe Section
+ ********************************************/
+.featured-recipe {
+  margin-bottom: 40px;
+}
+
+.recipe-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.recipe-text {
+  flex: 1;
+}
+
+.recipe-img {
+  flex: 1;
+}
+.recipe-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/********************************************
+ * Carousel Replacement for “Alle opskrifter”
+ ********************************************/
+ .product-carousel {
+  margin: 30px auto;
+  width: 90%;
+  text-align: center;
+}
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+  min-width: 220px; 
+  margin: 10px;
+  background: #fff;
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  text-align: center;
+  flex-shrink: 0; 
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+/* Prev and Next Buttons */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ccc;
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #333;
+  outline: none;
+}
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: #bbb;
+}
+.carousel-prev {
+  left: 10px;
+}
+.carousel-next {
+  right: 10px;
+}
+/* Dots (optional) */
+.carousel-dots {
+  margin-top: 10px;
+}
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.carousel-dots button.active {
+  background: #555;
+}
+
+/********************************************
+ * 5. "Alle opskrifter" Section
+ ********************************************/
+.all-recipes {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.recipe-search {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.recipe-search input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 240px;
+}
+
+.recipe-search button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.recipe-controls {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.recipe-controls button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/********************************************
+ * 6. Modal Styles (for Filter and Alternative)
+ ********************************************/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: var(--off-white);
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--dark-neutral);
+  cursor: pointer;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-btns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/********************************************
+ * 8. Trustpilot Carousel Styles
+ ********************************************/
+ .trustpilot-carousel {
+  margin: 40px auto;
+  width: 90%;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.trustpilot-carousel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Trustpilot carousel container */
+.carousel-container.trust-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Trustpilot carousel inner as flex container */
+.carousel-inner.trust-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Each review item (one per view) */
+.carousel-item.trust-review {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.review-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Trustpilot logo in review */
+.trust-logo {
+  max-width: 100px;
+  display: inline-block;
+}
+
+/* Prev/Next buttons for trustpilot carousel */
+.carousel-prev.trust-prev,
+.carousel-next.trust-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ccc;
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #333;
+  outline: none;
+}
+
+.carousel-prev.trust-prev:hover,
+.carousel-next.trust-next:hover {
+  background: #bbb;
+}
+
+.carousel-prev.trust-prev {
+  left: 10px;
+}
+
+.carousel-next.trust-next {
+  right: 10px;
+}
+
+/* Dots for trustpilot */
+.carousel-dots.trust-dots {
+  margin-top: 10px;
+}
+
+.carousel-dots.trust-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dots.trust-dots button.active {
+  background: #555;
+}
+
+
+/********************************************
+ * 8. Footer Styles
+ ********************************************/
+.section15 {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-bottom li a {
+  text-decoration: none;
+  color: var(--dark-neutral);
+  font-weight: 500;
+}
+
+.footer-bottom li a:hover {
+  text-decoration: underline;
+}
+
+/********************************************
+ * 9. Responsive Adjustments
+ ********************************************/
+@media (max-width: 768px) {
+  .recipe-flex {
+    flex-direction: column;
+  }
+  .row-layout {
+    flex-direction: column;
+  }
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

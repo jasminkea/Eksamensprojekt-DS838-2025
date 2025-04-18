@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='login.css') }}"
+    />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="login-container">
-        <h1>Login</h1>
-        <form action="{{ url_for('login') }}" method="POST">
-            <label for="username">Brugernavn</label>
-            <input type="text" name="username" id="username" required>
+      <h1>Login</h1>
+      <form action="{{ url_for('login') }}" method="POST">
+        <label for="username">Brugernavn</label>
+        <input type="text" name="username" id="username" required />
 
-            <label for="password">Adgangskode</label>
-            <input type="password" name="password" id="password" required>
+        <label for="password">Adgangskode</label>
+        <input type="password" name="password" id="password" required />
 
-            <input type="submit" value="Log ind">
+        <input type="submit" value="Log ind" />
 
-            {% if error %}
-            <p style="color:red;">{{ error }}</p>
-            {% endif %}
-        </form>
+        {% if error %}
+        <p style="color: red">{{ error }}</p>
+        {% endif %}
+      </form>
 
-        <form action="{{ url_for('forgot_password') }}" method="GET">
-            <button type="submit" style="margin-top: 10px;">Har du glemt dit kodeord?</button>
-        </form>
+      <form action="{{ url_for('forgot_password') }}" method="GET">
+        <button type="submit" style="margin-top: 10px">
+          Har du glemt dit kodeord?
+        </button>
+      </form>
     </div>
-</body>
+  </body>
 </html>

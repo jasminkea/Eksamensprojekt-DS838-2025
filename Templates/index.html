@@ -13,25 +13,31 @@
 
 
 
-  <!-- SECTION 1: Top Bar -->
-  <section class="section1 top-bar">
-    <div class="nav-left">
-      <a href="./info.html" class="links"><p>Info</p></a>
-      <a href="./index.html" class="links"><p>Produkter</p></a>
-      <a href="./index.html" class="links"><p>Opskrifter</p></a>
-    </div>
-  
-    <div class="nav-right">
-      <a href="#" class="links"><p>Søg</p></a>
-  
-      {% if session.get('user') %}
-        <a href="{{ url_for('indkoebsliste') }}" class="links"><p>Favoritter</p></a>
-        <a href="{{ url_for('logout') }}" class="links"><p>Log ud</p></a>
-      {% else %}
-        <a href="{{ url_for('login') }}" class="links"><p>Login</p></a>
-      {% endif %}
-    </div>
-  </section>
+
+<!-- SECTION 1: Top Bar -->
+<!-- NAVIGATION BAR -->
+<section class="section1 top-bar">
+  <div class="nav-left">
+    <a href="{{ url_for('index') }}" class="links"><p>Hjem</p></a>
+    <a href="{{ url_for('index') }}#section10" class="links"><p>Produkter</p></a>
+    <a href="{{ url_for('index') }}#section12" class="links"><p>Opskrifter</p></a>
+    <a href="{{ url_for('info') }}" class="links"><p>Om os</p></a>
+  </div>
+
+
+
+  <div class="nav-right">
+    <a href="#" class="links"><p>Søg</p></a>
+
+    {% if session.get('user') %}
+      <a href="{{ url_for('indkoebsliste') }}" class="links"><p>Favoritter</p></a>
+      <a href="{{ url_for('logout') }}" class="links"><p>Log ud</p></a>
+    {% else %}
+      <a href="{{ url_for('login') }}" class="links"><p>Login</p></a>
+    {% endif %}
+  </div>
+</section>
+
   
       
 
@@ -89,21 +95,27 @@
     </div>
   </section>
 
+<!-- SECTION 10:  (Landing + Color Background) -->
+<section class="section10" id="section10">
+  <div class="section10">
+    <h1>Mælk uden Mælk - hele dagen</h1>
+    <p class="tagline">Det er nemt at spise laktosefrit - endnu nemmere end du tror. </p>
+    <p class="tagline">Her finder du et lækkert bud på, hvordan en laktosefri hverdag kan se ud. </p>
+    <p class="tagline">Morgen, middag, aften - og en lille snack til. </p>
 
-  <!-- SECTION 10:  (Landing + Color Background) -->
-  <section class="section10">
-    <div class="section10">
-        <h1>Mælk uden Mælk - hele dagen</h1>
-        <p class="tagline">Det er nemt at spise laktosefrit - endnu nemmere end du tror. </p>
-        <p class="tagline">Her finder du et lækkert bud på, hvordan en laktosefri hverdag kan se ud. </p>
-          <p class="tagline">Morgen, middag, aften - og en lille snack til. </p>
-        </p>
-      <section class="product-grid">
-        <script src="../Data/script.js"></script>
-      </section>
+    <section class="product-grid">
+      {% for product in products %}
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='Images/' ~ product.image) }}" alt="{{ product.day }}">
+          <h3>{{ product.title }}</h3>
+          <p><strong>{{ product.price }} kr</strong></p>
+          <p>{{ product.description }}</p>
+        </div>
+      {% endfor %}
+    </section>
+  </div>
+</section>
 
-    </div>
-  </section>
 
   <!-- SECTIONS 11 & 12: (Landing + Picture) -->
   <div class="row">
@@ -112,7 +124,7 @@
       <p>Landing page content</p>
     </section>
 
-    <section class="section12 pic-box">
+    <section class="section12 pic-box" id="section12">
       <div class="image-container">
         <h1 class="image-text">Laktosefri opskrifter</h1>
         <a href="./recipe.html">
@@ -125,10 +137,38 @@
   </div>
 
   <!-- SECTION 15: Footer -->
-  <section class="section15">
-    <h2>Section 15</h2>
-    <p>Footer content</p>
-  </section>
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <h4>Kontakt</h4>
+      <p>Email: kontakt@maelkevejen.dk</p>
+      <p>Telefon: +45 1234 5678</p>
+    </div>
+    <div class="footer-column">
+      <h4>Følg os</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Tilmeld dig vores nyhedsbrev</h4>
+      <form>
+        <input type="email" placeholder="Indtast din email">
+        <button type="submit">Tilmeld</button>
+      </form>
+    </div>
+    <div class="footer-column logo-column">
+      <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="Mælkevejen logo" />
+    </div>
+  </div>
+  <div class="cookie-notice">
+    <p>Vi bruger cookies for at forbedre din oplevelse. <a href="#">Læs mere</a></p>
+  </div>
+</footer>
+
 
 </body>
 </html>

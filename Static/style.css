@@ -1,12 +1,12 @@
-/********************************************/
-/* 1. CSS Variables        */
-/********************************************/
+/* ----------------------------- */
+/*         1. CSS Variables     */
+/* ----------------------------- */
 :root {
-  --sage-green: #B2AC88;
-  --dusty-purple: #7C82A5;
-  --light-neutral: #F8F8F2;
-  --off-white: #E2E0D3;
-  --brownish-gray: #A39E8C;
+  --sage-green: #b2ac88;
+  --dusty-purple: #7c82a5;
+  --light-neutral: #f8f8f2;
+  --off-white: #e2e0d3;
+  --brownish-gray: #a39e8c;
   --dark-neutral: #575448;
   --accent-border: orange;
 }
@@ -22,13 +22,16 @@ body {
   color: var(--dark-neutral);
   line-height: 1.5;
   padding: 20px;
-  font-family: 'Winky Sans', sans-serif;
+  font-family: "Winky Sans", sans-serif;
 }
 
-/********************************************/
-/* 2. Top Bar                  */
-/********************************************/
+/* ----------------------------- */
+/*         2. Top Bar            */
+/* ----------------------------- */
 .top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,12 +51,12 @@ body {
 .links {
   padding: 0.5rem;
   text-decoration: none;
-  color: var(--dark-neutral)
+  color: var(--dark-neutral);
 }
 
-/********************************************/
-/* 3. Banner                 */
-/********************************************/
+/* ----------------------------- */
+/*         3. Banner             */
+/* ----------------------------- */
 .banner {
   position: relative;
   min-height: 300px;
@@ -81,10 +84,9 @@ body {
   font-size: 2rem;
   z-index: 1;
   padding-left: 150px;
-  font-family: 'Rochester', sans-serif;
+  font-family: "Rochester", sans-serif;
   margin-top: 0;
 }
-
 
 .banner-text {
   display: flex;
@@ -95,27 +97,23 @@ body {
 
 .banner video {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: brightness(0.5);
-} 
-
-/********************************************/
-/* 4. Images and videos                 */
-/********************************************/
-
-.image-container {
-  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  object-fit: cover;
+  filter: brightness(0.5);
 }
 
+/* ----------------------------- */
+/*         4. Visual Media       */
+/* ----------------------------- */
+.image-container,
 .video-container {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .video-container video {
@@ -126,77 +124,60 @@ body {
   filter: brightness(0.35);
 }
 
-.video-heading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white; /* or something readable */
-  font-size: 2rem;
-  text-align: center;
-  z-index: 1;
-  font-family: 'Lora', sans-serif;
-  font-size: 3.5rem
-}
-
+.video-heading,
 .image-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 500;
+  color: white;
   text-align: center;
   z-index: 1;
-  font-family: 'Lora', sans-serif;
+  font-family: "Lora", sans-serif;
 }
 
-/********************************************/
-/* 4. Gen. sect. styling               */
-/********************************************/
+.video-heading {
+  font-size: 3.5rem;
+}
 
+.image-text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* ----------------------------- */
+/*         5. Sections           */
+/* ----------------------------- */
 .section3 {
-  background-color: rgba(255, 255, 255, 0.4); /* light translucent white */
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 2rem 0;
-  border-radius: 10px; /* optional: smooth corners */
+  border-radius: 10px;
 }
+
 .section3 .quote-box {
   text-align: center;
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
-  
 }
 
 .section3 .quote-box h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--dark-neutral);
-  margin-bottom: 0.5rem;
-  font-family: "Rochester", sans-serif;
   font-size: 4rem;
+  font-family: "Rochester", sans-serif;
 }
 
 .section3 .quote-box p {
   font-size: 2rem;
-  color: var(--dark-neutral);
 }
 
 .section5 {
-font-family: 'Lora', sans-serif;
-align-items: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
-
-
+  font-family: "Lora", sans-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
-/********************************************/
-/* 4. Gen. sect. styling               */
-/********************************************/
 section {
   border: none;
   border-radius: 5px;
@@ -204,14 +185,13 @@ section {
   margin-bottom: 20px;
 }
 
-/********************************************/
-/* 5. Row Layout       */
-/********************************************/
+/* ----------------------------- */
+/*         6. Layout             */
+/* ----------------------------- */
 .row {
   display: flex;
   padding: 1;
 }
-
 
 .landing-box,
 .pic-box {
@@ -223,8 +203,6 @@ section {
   padding: 15px;
 }
 
-
-/* For images in the pic-box */
 .pic-box img.responsive-img {
   width: 100%;
   height: 100%;
@@ -237,57 +215,144 @@ section {
 
 .spotlight-prod {
   width: 300px;
-  height: auto; 
+  height: auto;
 }
 
-/********************************************/
-/* 6. Divider Styling        */
-/********************************************/
-.divider {
-  background-color: #2c2c2c;  
-  color: var(--light-neutral);
+/* ----------------------------- */
+/*         7. Product Grid       */
+/* ----------------------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 30px;
+  row-gap: 40px;
+  justify-content: center;
+  padding: 40px;
+  font-family: "Lora", sans-serif;
+}
+
+.product-card {
+  flex: 1 1 250px;
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid var(--brownish-gray);
+  border-radius: 20px;
+  padding: 30px;
   text-align: center;
-  padding: 10px;
-  margin: 10px 0;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-/********************************************/
-/* 7. Section Styling          */
-/********************************************/
+.product-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 
+.product-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-family: "Lora", sans-serif;
+}
 
+.product-card p {
+  font-size: 1rem;
+}
 
-.section10 {
+/* ----------------------------- */
+/*         8. Footer             */
+/* ----------------------------- */
+.main-footer {
+  background-color: var(--dark-neutral);
+  color: var(--light-neutral);
+  padding: 40px 20px;
+  font-family: "Lora", sans-serif;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--off-white);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  color: var(--light-neutral);
+  text-decoration: none;
+}
+
+.footer-column form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column input[type="email"] {
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer-column button {
+  padding: 8px;
   background-color: var(--sage-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo-column img {
+  max-width: 120px;
+  filter: brightness(0) invert(1);
+}
+
+.cookie-notice {
+  text-align: center;
   padding: 10px;
-  border-radius: 5px;
-  font-size: 2.0rem;   
-  text-align: center;
-  font-family: 'Rochester', sans-serif;
+  font-size: 0.9rem;
+  background-color: #444;
 }
 
-.section10 .tagline {
-  padding: 5px;
-  font-size: 2.0rem; 
-  max-width: 100%;       
-  line-height: 1.0;  
-  font-family: 'Lora', sans-serif;    
+/* ----------------------------- */
+/*         9. Utility            */
+/* ----------------------------- */
+.fade-hover {
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out, transform 0.4s ease;
 }
 
-
-.section15 {
-  background-color: #1a1a1a;  
-  color: var(--light-neutral);
-  text-align: center;
-  border: 1px solid var(--accent-border);
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
+.fade-hover:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
-/********************************************/
-/* 8. Responsive                     */
-/********************************************/
+/* ----------------------------- */
+/*        10. Responsive         */
+/* ----------------------------- */
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -298,5 +363,9 @@ section {
   }
   .row {
     flex-direction: column;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
   }
 }
