@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": 3,
     "day": "Til morgenmaden",
     "title": "Skyr med Mango/Passion Staystrong",
@@ -13,7 +13,7 @@
     "id": 4,
     "day": "Til snacken",
     "title": "Drikkeskyr Arla",
-    "price": 17.00,
+    "price": 17.0,
     "description": "Arla® Protein mælkedrik med en lækker smag af jordbær og hindbær. Produktet er med 40% mindre sukker end andre smagstilsatte mælkedrikke, og der er ingen sødestoffer tilsat. Dertil indeholder den 25g protein pr. portion, som bidrager til at vedligeholde og øge muskelmasse, som en del af en sund, varieret kost og aktiv livsstil. Derudover er den laktosefri.",
     "category": "snack",
     "image": "product-arla-drikkeskyr.png"
@@ -23,8 +23,8 @@
     "id": 2,
     "day": "Til aftensmaden",
     "title": "Creme fraiche 18% Thise",
-    "price": 21.00,
-    "description": "Thises laktosefri creme fraiche har en unik mild og flødeagtig smag samt en cremet konsistens.",
+    "price": 21.0,
+    "description": "Thises laktosefri creme fraiche har en unik mild og flødeagtig smag, der gør den perfekt til både kolde og varme retter. Den har en cremet konsistens, der giver en dejlig fyldig tekstur, og er ideel til at tilføje en blød og delikat smag uden laktose. Perfekt til dem, der ønsker en lækker smagsoplevelse, men som ikke tåler laktose.",
     "category": "main course",
     "image": "product-thise-cremefraiche.png"
   },

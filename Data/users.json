@@ -1,4 +1,5 @@
-[{
+[
+  {
     "name": "Jasmin",
     "email": "test@test.dk",
     "password": "123456",
@@ -6,8 +7,8 @@
     "pcode": "5000",
     "city": "Odense",
     "birthdate": "19.08.1998"
-},
-{
+  },
+  {
     "name": "Sara Maria Olsen",
     "email": "Sara@test.dk",
     "password": "123456",
@@ -15,8 +16,8 @@
     "pcode": "5230",
     "city": "Odense",
     "birthdate": "28.10.1967"
-},
-{
+  },
+  {
     "name": "Tariq Yousef",
     "email": "yousef@sdu.dk",
     "password": "123456",
@@ -24,5 +25,32 @@
     "pcode": "test",
     "city": "test",
     "birthdate": "1987-08-01"
-}
+  },
+  {
+    "name": "Jasmin98",
+    "email": "jasminn@test.dk",
+    "password": "hej",
+    "Street": "asdfghjkl",
+    "pcode": "5000",
+    "city": "Odense",
+    "birthdate": "2025-04-02"
+  },
+  {
+    "name": "Jas",
+    "email": "jskfs@fkd.dk",
+    "password": "fkdldf",
+    "Street": "sfidk",
+    "pcode": "5000",
+    "city": "fjdkfdn",
+    "birthdate": "2025-04-17"
+  },
+  {
+    "name": "testttt",
+    "email": "testttt@testttt.dk",
+    "password": "test",
+    "Street": "test",
+    "pcode": "5000",
+    "city": "test",
+    "birthdate": "2025-04-01"
+  }
 ]

@@ -1,0 +1,96 @@
+[
+  {
+    "id": "recipe1",
+    "name": "Chokolade Mousse",
+    "description": "En lækker og cremet laktosefri chokolademousse, perfekt som dessert.",
+    "category": "desserts",
+    "ingredients": [
+      "200g mørk laktosefri chokolade",
+      "400ml kokoscreme",
+      "2 spiseskefulde ahornsirup",
+      "1 teskefuld vaniljeekstrakt"
+    ],
+    "instructions": "Smelt chokoladen over et vandbad. Pisk kokoscremen til blød konsistens og vend den forsigtigt sammen med den smeltede chokolade, ahornsirup og vaniljeekstrakt. Fordel moussen i portionsglas og sæt den på køl i mindst 2 timer inden servering.",
+    "image": "chocolate-mousse.jpg"
+  },
+  {
+    "id": "recipe2",
+    "name": "Havregrød med Frugt",
+    "description": "En sund og mættende havregrød med friske bær og banan, ideel til morgenmad.",
+    "category": "breakfast",
+    "ingredients": [
+      "1 kop havregryn",
+      "2 kopper vand eller laktosefri mælk",
+      "En håndfuld friske bær",
+      "1 banan, skåret i skiver",
+      "Et dryp honning eller ahornsirup"
+    ],
+    "instructions": "Kog vand eller laktosefri mælk op i en gryde. Tilsæt havregryn, og lad det simre under omrøring, indtil grøden er cremet (ca. 5-7 minutter). Fordel grøden i skåle og top med friske bær, bananskiver og et dryp honning eller ahornsirup. Server straks.",
+    "image": "oatmeal.jpg"
+  },
+  {
+    "id": "recipe3",
+    "name": "Vegansk Bananbrød",
+    "description": "Et saftigt og sundt bananbrød uden mejeriprodukter, perfekt til en snack eller morgenmad.",
+    "category": "baking",
+    "ingredients": [
+      "3 modne bananer, most",
+      "1/3 kop kokosolie (smeltet)",
+      "3/4 kop sukker (kan reduceres)",
+      "1 teskefuld vaniljeekstrakt",
+      "1 teskefuld bagepulver",
+      "Pinch salt",
+      "1 1/2 kop hvedemel (kan blandes med fuldkornsmel)"
+    ],
+    "instructions": "Forvarm ovnen til 175°C. Bland de moste bananer med kokosolie, sukker og vaniljeekstrakt. Tilsæt bagepulver og salt, og fold derefter melet i blandingen. Hæld dejen i en smurt brødform, og bag i ca. 60 minutter eller indtil en tandstikker kommer ud ren. Lad brødet køle af, inden det skæres i skiver.",
+    "image": "banana-bread.jpg"
+  },
+  {
+    "id": "recipe4",
+    "name": "Grøntsagslasagne",
+    "description": "En varm og smagfuld laktosefri grøntsagslasagne med cremet bechamelsauce.",
+    "category": "dinner",
+    "ingredients": [
+      "9 lasagneplader (laktosefri)",
+      "2 zucchini, i skiver",
+      "1 aubergine, i skiver",
+      "1 glas tomatsauce",
+      "3 dl laktosefri bechamelsauce",
+      "Frisk basilikum",
+      "Olivenolie, salt og peber"
+    ],
+    "instructions": "Forvarm ovnen til 180°C. Steg zucchini og aubergine let i olivenolie. I et ovnfast fad lægges lagvis tomatsauce, lasagneplader, grøntsager og bechamelsauce. Gentag lagene og slut af med bechamelsauce og frisk basilikum. Bag i 35-40 minutter. Lad den hvile 10 minutter inden servering.",
+    "image": "veggie-lasagna.jpg"
+  },
+  {
+    "id": "recipe5",
+    "name": "Chiagrød med Kokos",
+    "description": "En forfriskende og nem morgenmadsgrød med kokos og chiafrø – laktosefri og rig på fibre.",
+    "category": "breakfast",
+    "ingredients": [
+      "3 spiseskefulde chiafrø",
+      "2 dl laktosefri kokosmælk",
+      "1 teskefuld ahornsirup",
+      "Friske mango- eller bærstykker til topping"
+    ],
+    "instructions": "Rør chiafrø, kokosmælk og ahornsirup sammen i en skål. Dæk til og sæt på køl i minimum 4 timer eller natten over. Rør godt igennem inden servering og top med frisk frugt.",
+    "image": "chia-pudding.jpg"
+  },
+  {
+    "id": "recipe6",
+    "name": "Linsesuppe med Karry",
+    "description": "En varmende og cremet linsesuppe med karry – helt uden fløde og mælk.",
+    "category": "dinner",
+    "ingredients": [
+      "1 løg, hakket",
+      "2 fed hvidløg, presset",
+      "1 spiseskefuld karrypulver",
+      "1,5 dl røde linser",
+      "5 dl grøntsagsbouillon",
+      "1 dl kokosmælk",
+      "Olivenolie, salt og peber"
+    ],
+    "instructions": "Sautér løg og hvidløg i olivenolie til de er bløde. Tilsæt karrypulver og rør i 1 minut. Kom linser og bouillon i gryden, bring i kog og lad simre i 20 minutter. Tilsæt kokosmælk og blend suppen glat. Smag til med salt og peber.",
+    "image": "lentil-soup.jpg"
+  }
+]

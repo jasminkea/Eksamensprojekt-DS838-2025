@@ -11,14 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rochester&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Rochester&family=Winky+Sans&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
     <!-- SECTION 1: Top Bar -->
-    <!-- NAVIGATION BAR -->
     <section class="section1 top-bar">
       <div class="nav-left">
         <a href="{{ url_for('index') }}" class="links"><p>Hjem</p></a>
@@ -28,12 +27,10 @@
         <a href="{{ url_for('index') }}#section12" class="links"
           ><p>Opskrifter</p></a
         >
-        <a href="{{ url_for('info') }}" class="links"><p>Info</p></a>
+        <a href="{{ url_for('index') }}" class="links"><p>Info</p></a>
       </div>
 
       <div class="nav-right">
-        <a href="#" class="links"><p>Søg</p></a>
-
         {% if session.get('user') %}
         <a href="{{ url_for('indkoebsliste') }}" class="links"
           ><p>Favoritter</p></a
@@ -45,7 +42,7 @@
       </div>
     </section>
 
-    <!-- SECTION 2: Banner (background video) -->
+    <!-- SECTION 2: Banner -->
     <section class="section2 banner">
       <video
         src="{{ url_for('static', filename='Videos/field_running.mp4') }}"
@@ -53,25 +50,24 @@
         muted
         loop
       ></video>
-
       <div class="banner-text">
         <h1>Mælkevejen..</h1>
         <p class="tagline">smagen af frihed - uden laktose</p>
       </div>
     </section>
 
-    <!-- SECTION 3 -->
+    <!-- SECTION 3: Quote -->
     <section class="section3">
       <div class="quote-box">
         <h2>"Livet er bedre uden ondt i maven."</h2>
         <p>
           Hos os handler det ikke bare om laktosefri produkter - men om friheden
-          til at nyde livet, uden kompromis
+          til at nyde livet, uden kompromis.
         </p>
       </div>
     </section>
 
-    <!-- SECTIONS 5 & 6  -->
+    <!-- SECTIONS 5 & 6: What is Lactose -->
     <div class="row">
       <section class="section6 pic-box">
         <div class="video-container">
@@ -103,16 +99,14 @@
       </section>
     </div>
 
-    <!-- SECTION 8: Landing (Left) + Pic (Right) -->
+    <!-- SECTION 8: Product promo -->
     <section class="section8">
       <div class="row" id="div1">
         <div class="landing-box">
           <h2>Laktosefri uden besvær</h2>
           <p>
             Uanset om det er morgenkaffen, frokostmadpakken eller aftensnacken,
-            finder du nemt laktosefri alternativer, der smager fantastisk. Med
-            vores udvalg er det let at bytte ud – uden at gå på kompromis med
-            hverken vaner eller velsmag.
+            finder du nemt laktosefri alternativer, der smager fantastisk.
           </p>
         </div>
         <div class="pic-box">
@@ -120,7 +114,7 @@
             <h1 class="image-text">Se udvalget af laktosefri produkter her!</h1>
             <img
               src="{{ url_for('static', filename='Images/products-cow.jpg') }}"
-              alt="Example"
+              alt="Produkter"
               class="responsive-img"
             />
           </div>
@@ -128,49 +122,58 @@
       </div>
     </section>
 
-    <!-- SECTION 10:  (Landing + Color Background) -->
+    <!-- SECTION 10: Product Grid -->
     <section class="section10" id="section10">
-      <div class="section10">
-        <h1>Mælk uden Mælk - hele dagen</h1>
-        <p class="tagline">
-          Det er nemt at spise laktosefrit - endnu nemmere end du tror.
-        </p>
-        <p class="tagline">
-          Her finder du et lækkert bud på, hvordan en laktosefri hverdag kan se
-          ud.
-        </p>
-        <p class="tagline">Morgen, middag, aften - og en lille snack til.</p>
-
-        <section class="product-grid">
-          {% for product in products %}
-          <div class="product-card">
-            <img
-              src="{{ url_for('static', filename='Images/' ~ product.image) }}"
-              alt="{{ product.day }}"
-            />
-            <h3>{{ product.title }}</h3>
-            <p><strong>{{ product.price }} kr</strong></p>
-            <p>{{ product.description }}</p>
-          </div>
-          {% endfor %}
-        </section>
-      </div>
+      <section class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+          <img
+            src="{{ url_for('static', filename='Images/' ~ product.image) }}"
+            alt="{{ product.day }}"
+          />
+          <h3>{{ product.title }}</h3>
+          <p><strong>{{ product.price }} kr</strong></p>
+          <p>{{ product.description }}</p>
+        </div>
+        {% endfor %}
+      </section>
     </section>
 
-    <!-- SECTIONS 11 & 12: (Landing + Picture) -->
+    <!-- SECTION 12: Recipe Preview -->
     <div class="row">
-      <section class="section11 landing-box">
-        <h2>Section 11 - Landing</h2>
-        <p>Landing page content</p>
+      <section class="section12 landing-box">
+        <h1>Laktosefri Opskrifter</h2>
+        <p>
+          <h3>
+          Udforsk et udvalg af lækre, laktosefri opskrifter, der giver dig
+          mulighed for at nyde dine yndlingsretter uden bekymringer.
+        </h3>
+          <br />
+          <h3>
+          Fra cremede supper til saftige desserter – vi har noget for enhver
+          smag.
+        </h3>
+          <br />
+          <h3>
+            Få inspiration til sundere måltider, som både er nemme at
+            tilberede og fyldt med smag.
+          </h3>
+          <br />
+          <h3>
+          Uanset om du er laktoseintolerant eller bare ønsker at reducere
+          laktosen i din kost, vil vores opskrifter sikre, at du ikke går på
+          kompromis med hverken smag eller kvalitet.
+        </h3>
+        </p>
       </section>
 
-      <section class="section12 pic-box" id="section12">
+      <section class="section11 pic-box" id="section12">
         <div class="image-container">
           <h1 class="image-text">Laktosefri opskrifter</h1>
-          <a href="./recipe.html">
+          <a href="{{ url_for('recipe') }}">
             <img
               src="{{ url_for('static', filename='Images/recipe-pic.jpg') }}"
-              alt="Example"
+              alt="Opskrifter"
               class="responsive-img"
             />
           </a>
@@ -178,7 +181,6 @@
       </section>
     </div>
 
-    <!-- SECTION 15: Footer -->
     <!-- FOOTER -->
     <footer class="main-footer">
       <div class="footer-content">
@@ -186,21 +188,6 @@
           <h4>Kontakt</h4>
           <p>Email: kontakt@maelkevejen.dk</p>
           <p>Telefon: +45 1234 5678</p>
-        </div>
-        <div class="footer-column">
-          <h4>Følg os</h4>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Tilmeld dig vores nyhedsbrev</h4>
-          <form>
-            <input type="email" placeholder="Indtast din email" />
-            <button type="submit">Tilmeld</button>
-          </form>
         </div>
         <div class="footer-column logo-column">
           <img
@@ -216,6 +203,21 @@
         </p>
       </div>
     </footer>
+
+    <!-- Newsletter Modal -->
+    <div id="newsletter-modal" class="newsletter-modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2>Tilmeld dig nyhedsbrevet</h2>
+        <form id="newsletter-form">
+          <input type="text" id="newsletter-name" placeholder="Dit navn" />
+          <input type="text" id="newsletter-email" placeholder="Din email" />
+          <button type="submit">Tilmeld</button>
+        </form>
+        <p id="newsletter-message"></p>
+      </div>
+    </div>
+
     <script src="{{ url_for('static', filename='index.js') }}"></script>
   </body>
 </html>

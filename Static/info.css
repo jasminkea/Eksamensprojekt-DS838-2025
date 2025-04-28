@@ -1,0 +1,243 @@
+/* Style for Lactose Info Subpage based on site style */
+
+:root {
+  --sage-green: #b2ac88;
+  --dusty-purple: #7c82a5;
+  --light-neutral: #f8f8f2;
+  --off-white: #e2e0d3;
+  --brownish-gray: #a39e8c;
+  --dark-neutral: #575448;
+  --accent-border: orange;
+}
+
+body {
+  background-color: var(--light-neutral);
+  color: var(--dark-neutral);
+  font-family: "Winky Sans", sans-serif;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* ----------------------------- */
+/*         2. Top Bar            */
+/* ----------------------------- */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--off-white);
+  padding: 10px 30px;
+  border: 1px solid var(--accent-border);
+  width: 100%;
+  max-width: none; /* Matcher body */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-left,
+.nav-right {
+  margin: 0;
+  display: flex;
+}
+
+.links {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--dark-neutral);
+}
+
+.section3 {
+  background-color: var(--off-white);
+  margin: 20px auto;
+  padding: 40px 60px; /* god padding på siderne */
+  width: 100%;
+  max-width: 1400px; /* så det ikke bliver for bredt på mega-skærme */
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.pic-box {
+  width: 100%;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+  border: 1px solid var(--brownish-gray);
+  border-radius: 10px;
+  filter: brightness(0.85);
+}
+
+.image-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  font-family: "Lora", serif;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.landing-box {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+}
+
+.landing-box h2 {
+  font-size: 2.2rem;
+  color: var(--dark-neutral);
+  margin-bottom: 15px;
+}
+
+.landing-box p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.subsection h3 {
+  font-size: 1.7rem;
+  color: var(--dusty-purple);
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.subsection p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* ----------------------------- */
+/*         8. Footer             */
+/* ----------------------------- */
+.main-footer {
+  background-color: var(--dark-neutral);
+  color: var(--light-neutral);
+  padding: 40px 20px;
+  font-family: "Lora", sans-serif;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--off-white);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  color: var(--light-neutral);
+  text-decoration: none;
+}
+
+.footer-column form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column input[type="email"] {
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer-column button {
+  padding: 8px;
+  background-color: var(--sage-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo-column img {
+  max-width: 120px;
+  filter: brightness(0) invert(1);
+}
+
+.cookie-notice {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: #444;
+}
+
+/* ----------------------------- */
+/*        10. Responsive         */
+/* ----------------------------- */
+@media (max-width: 1024px) {
+  .section3 {
+    padding: 30px 40px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section3 {
+    padding: 20px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section3 {
+    padding: 15px;
+    width: 95%;
+  }
+}
+
+.image-container img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.image-container img:hover {
+  transform: scale(1.03); /* Let zoom */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Flot skygge */
+}

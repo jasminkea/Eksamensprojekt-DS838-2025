@@ -1,0 +1,189 @@
+/* ----------------------------- */
+/*         1. Top Bar Styling    */
+/* ----------------------------- */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--off-white);
+  padding: 10px 20px;
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+}
+
+.links {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--dark-neutral);
+}
+
+/* ----------------------------- */
+/*         2. Wishlist Section   */
+/* ----------------------------- */
+.cart-container {
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.cart-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--dark-neutral);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--accent-border);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: var(--light-neutral);
+}
+
+.cart-item img {
+  max-width: 80px;
+  margin-right: 15px;
+}
+
+.cart-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--dark-neutral);
+}
+
+.cart-item p {
+  margin: 5px 0;
+}
+
+.cart-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-controls button {
+  padding: 10px 20px;
+  background-color: var(--sage-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-controls button:hover {
+  background-color: #5c7e63;
+}
+
+.cart-item-empty {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--dark-neutral);
+}
+
+/* ----------------------------- */
+/*         3. Footer Styling     */
+/* ----------------------------- */
+.main-footer {
+  background-color: var(--dark-neutral);
+  color: var(--light-neutral);
+  padding: 40px 20px;
+  font-family: "Lora", sans-serif;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--off-white);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  color: var(--light-neutral);
+  text-decoration: none;
+}
+
+.footer-column form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column input[type="email"] {
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer-column button {
+  padding: 8px;
+  background-color: var(--sage-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo-column img {
+  max-width: 120px;
+  filter: brightness(0) invert(1);
+}
+
+.cookie-notice {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: #444;
+}
+
+/* ----------------------------- */
+/*        4. Responsive Styles   */
+/* ----------------------------- */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cart-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

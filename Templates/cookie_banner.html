@@ -1,0 +1,77 @@
+<!-- Cookie consent banner -->
+<div
+  id="cookieConsentBanner"
+  class="cookie-notice"
+  style="
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  "
+>
+  <p>
+    Vi bruger cookies for at forbedre din oplevelse.
+    <a href="/cookie_consent">Læs mere</a>
+  </p>
+
+  <!-- Allow Cookies Button -->
+  <button id="allowBtn" onclick="allowCookies()">Accepter</button>
+
+  <!-- Decline Cookies Button -->
+  <button id="declineBtn" onclick="declineCookies()">Afvis</button>
+</div>
+
+<script>
+  // Function to get a cookie by its name
+  function getCookie(name) {
+    let cookieArr = document.cookie.split(";");
+    for (let i = 0; i < cookieArr.length; i++) {
+      let cookie = cookieArr[i].trim();
+      if (cookie.startsWith(name + "=")) {
+        return cookie.split("=")[1]; // Return the cookie value
+      }
+    }
+    return null; // Return null if cookie is not found
+  }
+
+  // Check if cookie consent has already been given (either 'allow' or 'disallow')
+  window.onload = function () {
+    const cookieConsent = getCookie("cookie_consent"); // Check if cookie consent exists
+
+    // If cookie consent is already given (either 'allow' or 'disallow'), hide the banner
+    if (cookieConsent) {
+      document.getElementById("cookieConsentBanner").style.visibility = "none";
+    } else {
+      // No consent yet → show the banner
+      document.getElementById("cookieConsentBanner").style.display = "block";
+    }
+  };
+
+  // Function to allow cookies
+  function allowCookies() {
+    document.getElementById("cookieConsentBanner").style.display = "none";
+
+    fetch("/set-cookie-consent", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ consent: "allow" }),
+    });
+  }
+
+  function declineCookies() {
+    document.getElementById("cookieConsentBanner").style.display = "none";
+
+    fetch("/set-cookie-consent", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ consent: "disallow" }),
+    });
+  }
+</script>
